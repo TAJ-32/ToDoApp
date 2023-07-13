@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+//import Head from "next/head";
+//import { useRouter } from "next/router";
 
-function App() {
+function App({ Component, pageProps }) {
+
+  const [ToDoItems, setToDoItems] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Head>
+        <title>Productivity Awaits</title>
+      </Head>
+      <main>
+        <h1 className='title'>Productivity Awaits</h1>
+      </main>
+      
+
     </div>
   );
 }
 
 export default App;
+
+App.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.shape({}),
+}
