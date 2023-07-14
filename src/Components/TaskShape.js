@@ -5,8 +5,8 @@ const TaskShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   created: PropTypes.string.isRequired,
-  deadline: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
+  //deadline: PropTypes.string.isRequired,
+  //completed: PropTypes.bool.isRequired,
 });
 
 export default TaskShape;

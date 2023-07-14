@@ -12,18 +12,30 @@ export default function TaskMaker({
 }) {
 //   const router = useRouter();
 
+  console.log(Tasks.length)
+
   const complete = (task) => {
     if (task) {
-      let maxID = Tasks[0].id;
-      for (let i = 0; i < Tasks.length; i++) {
-        if (Tasks[i].id > maxID) {
-          maxID = Tasks[i].id + 1;
+      console.log("Sartaj")
+      if (Tasks.length !== 0)
+      {
+        let maxID = Tasks[0].id;
+        for (let i = 0; i < Tasks.length; i++) {
+          if (Tasks[i].id > maxID) {
+            maxID = Tasks[i].id + 1;
+          }
         }
+        task.id = maxID;
+      }
+      else
+      {
+        task.id = 0;
       }
       //article = {maxID, ...article};
-      task.id = maxID;
 
       setTasks([task, ...Tasks]);
+      console.log(Tasks.length)
+      console.log(Tasks[0])
     } 
     else {
       //router.back();

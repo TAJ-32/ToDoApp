@@ -13,13 +13,17 @@ export default function TaskCreation({ task, complete }) {
 
     const currDateString = currentDate.toISOString();
 
+    console.log("Hello")
+
     complete({
       ...task,
       name: name,
       description: description,
       created: currDateString,
     });
+    console.log("Task?")
   }
+
   function CancelButton() {
     complete();
   }
@@ -64,5 +68,5 @@ export default function TaskCreation({ task, complete }) {
 
 TaskCreation.propTypes = {
   complete: PropTypes.func.isRequired,
-  task: TaskShape.isRequired,
+  task: TaskShape,
 };
