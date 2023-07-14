@@ -10,9 +10,7 @@ function App({ Component, pageProps }) {
   const [ToDoItems, setToDoItems] = useState([]);
   return (
     <div className="App">
-      <Head>
-        <title>Productivity Awaits</title>
-      </Head>
+      <title>Productivity Awaits</title>
       <main>
         <h1 className='title'>Productivity Awaits</h1>
       </main>
