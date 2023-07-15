@@ -17,16 +17,18 @@ export default function TaskMaker({
   const complete = (task) => {
     if (task) {
       console.log("Sartaj")
-      if (Tasks.length !== 0)
+      if (Tasks.length > 0)
       {
         console.log("Singh")
         let maxID = Tasks[0].id;
         for (let i = 0; i < Tasks.length; i++) {
-          if (Tasks[i].id > maxID) {
+          if (Tasks[i].id >= maxID) {
             maxID = Tasks[i].id + 1;
+            console.log("in for loop")
           }
         }
         task.id = maxID;
+        console.log("max: " + maxID)
         setTasks([...Tasks, task]);
       }
       else
