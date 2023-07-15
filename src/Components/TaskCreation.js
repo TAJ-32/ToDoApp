@@ -21,7 +21,6 @@ export default function TaskCreation({ task, complete }) {
       description: description,
       created: currDateString,
     });
-    console.log("Task?")
   }
 
   function CancelButton() {

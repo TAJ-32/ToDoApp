@@ -19,6 +19,7 @@ export default function TaskMaker({
       console.log("Sartaj")
       if (Tasks.length !== 0)
       {
+        console.log("Singh")
         let maxID = Tasks[0].id;
         for (let i = 0; i < Tasks.length; i++) {
           if (Tasks[i].id > maxID) {
@@ -26,21 +27,24 @@ export default function TaskMaker({
           }
         }
         task.id = maxID;
+        setTasks([...Tasks, task]);
       }
       else
       {
         task.id = 0;
+        setTasks([task]);
       }
       //article = {maxID, ...article};
-
-      setTasks([task, ...Tasks]);
-      console.log(Tasks.length)
-      console.log(Tasks[0])
     } 
     else {
       //router.back();
     }
+
   };
+
+  console.log(Tasks.length)
+  console.log(Tasks[0])
+  console.log(Tasks)
 
   return (
     <>

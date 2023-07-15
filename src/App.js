@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import TaskMaker from './Components/TaskMaker';
 //import Head from "next/head";
 //import { useRouter } from "next/router";
@@ -27,7 +27,7 @@ function App({ Component, pageProps }) {
 
 export default App;
 
-App.propTypes = {
-  Component: PropTypes.elementType.isRequired,
-  pageProps: PropTypes.shape({}),
-}
+// App.propTypes = {
+//   Component: PropTypes.elementType.isRequired,
+//   pageProps: PropTypes.shape({}),
+// }
