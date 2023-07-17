@@ -5,6 +5,7 @@ import TaskShape from "./TaskShape";
 //import Article from "../../components/Article";
 import TaskCreation from "./TaskCreation";
 import TaskViewer from "./TaskViewer";
+import Calendar from "./Calendar";
 //import { useRouter } from "next/router";
 
 export default function TaskMaker({
@@ -57,6 +58,8 @@ export default function TaskMaker({
         //task={task}
         complete={complete}
       />
+
+      <Calendar />
 
       <TaskViewer
         Tasks={Tasks}

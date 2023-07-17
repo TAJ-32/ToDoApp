@@ -21,7 +21,7 @@ export default function TaskCreation({ task, complete }) {
       name: name,
       description: description,
       created: currDateString,
-      //deadline: <Calendar task={task} />
+      deadline: <Calendar task={task} />
     });
   }
 
@@ -52,7 +52,9 @@ export default function TaskCreation({ task, complete }) {
           cols={40}
         />
       </label>
-      <hr />
+      <br></br>
+      <br></br>
+      
 
       <button
         type="sumbit"
@@ -63,6 +65,7 @@ export default function TaskCreation({ task, complete }) {
         Save
       </button>
       <button onClick={CancelButton}>Cancel</button>
+      
     </div>
   );
 }

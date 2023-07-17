@@ -12,10 +12,11 @@ export default function TaskDetails({ task }) {
   };
 
   return (
-      <ul key={task.name} data-testid="name" onClick={() => Handler()}>
+    
+    <ul key={task.name} data-testid="name" onClick={() => Handler()}>
         <h5>{task.name}</h5>
         {showMore && task.description}
-      </ul>
+    </ul>
   );
 }
 

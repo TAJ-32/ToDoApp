@@ -8,8 +8,10 @@ export default function TaskViewer({ Tasks }) {
         <TaskDetails key={task.title} task={task} />
     ))
     return (
+        
 
         <div className={styles.border}>
+            
             <h1>-----Your Tasks-----</h1>
             {tasks_list}
         </div>
