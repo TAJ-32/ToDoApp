@@ -4,6 +4,7 @@ import TaskShape from "./TaskShape";
 //import ArticleShape from "../components/ArticleShape";
 //import Article from "../../components/Article";
 import TaskCreation from "./TaskCreation";
+import TaskViewer from "./TaskViewer";
 //import { useRouter } from "next/router";
 
 export default function TaskMaker({
@@ -55,6 +56,10 @@ export default function TaskMaker({
         //setCurrentArticle={setCurrentArticle}
         //task={task}
         complete={complete}
+      />
+
+      <TaskViewer
+        Tasks={Tasks}
       />
     </>
   );

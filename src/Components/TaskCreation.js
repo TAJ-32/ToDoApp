@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 //import styles from "../styles/Editor.module.css";
 import { useState } from "react";
 import TaskShape from "./TaskShape";
+import Calendar from "./Calendar";
 
 export default function TaskCreation({ task, complete }) {
   const [name, setName] = useState(task ? task.name : "");
@@ -20,6 +21,7 @@ export default function TaskCreation({ task, complete }) {
       name: name,
       description: description,
       created: currDateString,
+      //deadline: <Calendar task={task} />
     });
   }
 
@@ -46,8 +48,8 @@ export default function TaskCreation({ task, complete }) {
         <textarea
           value={description}
           onChange={(event) => setDescription(event.target.value)}
-          rows={20}
-          cols={60}
+          rows={5}
+          cols={40}
         />
       </label>
       <hr />

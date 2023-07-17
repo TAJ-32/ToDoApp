@@ -1,0 +1,11 @@
+/* Styles for the article */
+.border { 
+    
+    background-color: purple; 
+    border: 0.5rem outset red;
+    border-radius: 12px;
+    text-align: left;
+    display:table; 
+    margin:0 auto;
+}
+  
