@@ -7,8 +7,8 @@ export default function TaskViewer({ Tasks }) {
     const tasks_list = Tasks.map((task) => (
         <TaskDetails key={task.title} task={task} />
     ))
+    
     return (
-        
 
         <div className={styles.border}>
             

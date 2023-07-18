@@ -11,10 +11,14 @@ export default function TaskDetails({ task }) {
     setShowMore(!showMore);
   };
 
+  console.log("Deadline: " + task.deadline);
+  console.log("Now: " + new Date());
+
   return (
     
     <ul key={task.name} data-testid="name" onClick={() => Handler()}>
-        <h5>{task.name}</h5>
+        <h5>{task ? task.name + " (" + task.deadline + ") " : ""}</h5>
+        <br></br>
         {showMore && task.description}
     </ul>
   );

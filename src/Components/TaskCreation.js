@@ -5,14 +5,21 @@ import { useState } from "react";
 import TaskShape from "./TaskShape";
 import Calendar from "./Calendar";
 
+import DatePicker from 'react-datepicker';
+import styles from 'react-datepicker/dist/react-datepicker.css';
+
 export default function TaskCreation({ task, complete }) {
   const [name, setName] = useState(task ? task.name : "");
   const [description, setDescription] = useState(task ? task.description : "");
+  const [deadline, setDeadline] = useState(new Date().toLocaleDateString('fr-FR'));
+
 
   function SaveButton() {
     const currentDate = new Date();
 
     const currDateString = currentDate.toISOString();
+
+    //const deadlingDateString = deadlineDate.toISOString();
 
     console.log("Hello")
 
@@ -21,7 +28,7 @@ export default function TaskCreation({ task, complete }) {
       name: name,
       description: description,
       created: currDateString,
-      deadline: <Calendar task={task} />
+      deadline: deadline,
     });
   }
 
@@ -30,7 +37,9 @@ export default function TaskCreation({ task, complete }) {
   }
 
   return (
+    
     <div>
+      
       <label>
         Name:{" "}
         <input
@@ -53,6 +62,20 @@ export default function TaskCreation({ task, complete }) {
         />
       </label>
       <br></br>
+      <br></br>
+
+      {/* <Calendar task={task} deadline={deadline} setDeadline={setDeadline}/> */}
+
+      <DatePicker
+            dateFormat="MM/dd/yyyy"
+            value={deadline}
+            onChange={(date) => {
+                const d = new Date(date).toLocaleDateString('fr-FR');
+                console.log("D: " + d);
+                setDeadline(d);
+            }}
+        />
+
       <br></br>
       
 

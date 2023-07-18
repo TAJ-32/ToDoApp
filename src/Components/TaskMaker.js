@@ -59,7 +59,7 @@ export default function TaskMaker({
         complete={complete}
       />
 
-      <Calendar />
+      {/* <Calendar /> */}
 
       <TaskViewer
         Tasks={Tasks}
